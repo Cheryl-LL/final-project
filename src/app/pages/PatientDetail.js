@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import PatientInfo from '../components/PatientDetailTabs/PersonalInfo';
 import TopMenu from '../components/TopMenu';
+import AdditionalNote from '../components/PatientDetailTabs/AdditionalNote';
+import TeamMember from '../components/PatientDetailTabs/TeamMember';
 
 export default function PatientDetail() {
 
@@ -113,10 +115,19 @@ export default function PatientDetail() {
       <div>Medical Info Content</div>
     )}
     {activeTab === 'team' && (
-      <div>Team Content</div>
+      <div>
+        <section>
+        <h1>Current Team Member</h1>
+        <TeamMember />
+        </section>
+        <section>
+        <h1>Previous Team Member</h1>
+        <TeamMember />
+        </section>
+        </div>
     )}
     {activeTab === 'notes' && (
-      <div>Additional Notes Content</div>
+      <AdditionalNote />
     )}
   </div>
 </div>
