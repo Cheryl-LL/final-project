@@ -25,7 +25,7 @@ export default function SignInPage() {
   return (
     <main>
       <header>
-        <h1 className="text-3xl">Patient Management System</h1>
+        <h1 className="text-3xl">Bridging Abilities Patient System</h1>
       </header>
       {user ? (
         //User is logged in
@@ -33,11 +33,10 @@ export default function SignInPage() {
           <p>Welcome, {user.displayName}</p>
           <p>{user.email}</p>
           <img className="w-8 h-8" src={user.photoURL} />
-          <Link className="underline text-green-600 hover:text-green-300" href="/pages/view-patient-list">View Patient List</Link>
-          <Link className="underline text-green-600 hover:text-green-300" href="/pages/add-new-patient">Add New Patient</Link>
+          <Link className="btn" href="/pages/view-patient-list">Enter System</Link>
           <button
             onClick={handleSignOut}
-            className="bg-purple-300 w-40 h-10 rounded mb-5"
+            className="btn mx-10"
           >
             Sign Out
           </button>
@@ -47,7 +46,7 @@ export default function SignInPage() {
         <div>
           <button
             onClick={handleSignIn}
-            className="bg-purple-300 w-40 h-10 rounded mb-5"
+            className="btn"
           >
             Sign In
           </button>
