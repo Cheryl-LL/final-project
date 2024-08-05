@@ -1,4 +1,4 @@
-const PatientInfo = ({ patient, primaryGuardian, secondaryGuardian }) => {
+const PatientInfo = ({ patient }) => {
   
   const InfoItem = ({ label, value }) => (
     <div>

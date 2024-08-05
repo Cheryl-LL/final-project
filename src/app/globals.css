@@ -46,3 +46,117 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Ensure inputs have visible outlines */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="checkbox"],
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="checkbox"]:focus,
+textarea:focus {
+  border-color: #0070f3;
+}
+
+/* Align form labels and inputs */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+/* Grid layout for the form */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #005bb5;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.bg-blue-500 {
+  background-color: #0070f3;
+  color: white;
+}
+
+button.bg-blue-500:hover {
+  background-color: #005bb5;
+}
+
+
+.sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.active-link {
+  background-color: #1D4ED8; /* Equivalent to bg-blue-500 in Tailwind CSS */
+  color: white;
+}
+

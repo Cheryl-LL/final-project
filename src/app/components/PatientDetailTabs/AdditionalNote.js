@@ -1,11 +1,10 @@
 "use client";
 import { useState } from "react";
 
-const mockNote = "Note about this patient!";
-export default function AdditionalNote() {
-  //To-Do:get note from database and set as initial state
+export default function AdditionalNote({additionalNote}) {
+
   //note state
-  const [note, setNote] = useState(mockNote);
+  const [note, setNote] = useState(additionalNote);
   //textarea editable state
   const [isEditable, setEditable] = useState(false);
   //note change handler
@@ -16,17 +15,18 @@ export default function AdditionalNote() {
 
   return (
     <div>
+      
+      <section>
+        <label>Note:</label>
+        <textarea rows="10" cols="50" className="noteText" readOnly={!isEditable} onChange={handleNoteChange} value={note}></textarea>
+      </section>
       <section>
         {//Display Edit or Save button depending on editable
         isEditable ? (
-          <button onClick={disableEdit}>Save</button>
+          <button className="btn" onClick={disableEdit}>Save</button>
         ) : (
-          <button onClick={enableEdit}>Edit</button>
+          <button className="btn" onClick={enableEdit}>Edit</button>
         )}
-      </section>
-      <section>
-        <label>Note:</label>
-        <textarea readOnly={!isEditable} onChange={handleNoteChange} value={note}></textarea>
       </section>
     </div>
   );
